@@ -1,0 +1,23 @@
+.dropdown{
+    text-align: center;
+}
+
+.btn{
+    width: 98%;
+    color: black;
+    font-size: 1rem;
+    border-radius: 0;
+    border: 2px solid black;
+}
+
+.btn:hover{
+    color: black;
+    background-color: yellow;
+    transform: scale(1.1);
+}
+
+.dropdown-menu{
+    border-radius: 0;
+    border: 1px solid black;
+    width: 100%;
+}
