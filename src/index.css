@@ -21,8 +21,8 @@
     transform: translate(-50%, -50%); 
     max-width: 200rem;
     max-height: 200rem;
-    background-color: white;
-    /* padding: 2rem 3rem; */
+    background-color: #c6d9f1;
+    padding: 1rem 1rem;
     border-radius: 0.5rem;
   }
   

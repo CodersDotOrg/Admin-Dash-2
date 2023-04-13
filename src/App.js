@@ -26,6 +26,10 @@ import EditVendor from './components/forms/EditVendor';
 import AddUom from './components/forms/AddUom';
 import EditUom from './components/forms/EditUom';
 import VendorPage from "./pages/VendorPage";
+import AddFinanceManager from "./components/forms/AddFinanceManager";
+import EditFinanceManager from "./components/forms/EditFinanceManager";
+import AddCustomer from "./components/forms/AddCustomer";
+import EditCustomer from "./components/forms/EditCustomer";
 
 
 Modal.setAppElement('#root');
@@ -53,6 +57,12 @@ function App() {
 
             <Route exact path="addinventorymanager" element={<AddInventoryManager />} />
             <Route exact path="viewinventorymanagers" element={<InventoryPage />} />
+
+            <Route exact path="addfinancemanager" element={<AddFinanceManager />} />
+            <Route exact path="editfinancemanager" element={<EditFinanceManager />} />
+
+            <Route exact path="addcustomer" element={<AddCustomer />} />
+            <Route exact path="editcustomer" element={<EditCustomer />} />
 
             <Route exact path="viewvendors" element={<VendorPage />} />
 

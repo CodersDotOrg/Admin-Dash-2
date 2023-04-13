@@ -2,8 +2,7 @@ import React from "react";
 import "./Orders.css";
 import Modal from "../Modal";
 import EditProduct from "../forms/EditProduct";
-import SingleProduct from "../viewsingle/ViewSingleProduct";
-
+import ViewSingleProduct from "../viewsingle/ViewSingleProduct";
 
 const info = [
   {
@@ -40,6 +39,17 @@ const info = [
 
 ];
 
+const obj = {
+       firstname: 'Amit',
+        lastname: 'Mane',
+        email: 'amit@gmail.com',
+        contact: '8888999900',
+        agentimage: "https://img.etimg.com/thumb/width-1200,height-900,imgsize-40284,resizemode-1,msid-94083783/news/sports/virat-kohli-returns-to-the-top-of-the-order-for-the-9th-time-in-t20is.jpg",
+        city: 'Delhi',
+        address: 'Gurgaon',
+        state: 'Delhi'
+}
+
 
 
 const ProductDetails = () => {
@@ -57,7 +67,7 @@ const ProductDetails = () => {
             <h2>Product #{e.id}</h2>
             <p>{e.Name}</p>
             <div className="btn flex m-0 p-0">
-              <Modal btnname="DETAILS" compinfo={<SingleProduct />} />
+              <Modal btnname="DETAILS" compinfo={<ViewSingleProduct obj={obj}/>} />
               <Modal btnname="EDIT" compinfo={<EditProduct />} />
               <Modal btnname="DELETE" compinfo={<><h2 className="text-red-600 text-xl font-bold font-poppins">Are you sure you want to delete this product??</h2></>} />
             </div>

@@ -17,13 +17,12 @@ const MyModal = ({ closeModal, compinfo }) => {
     <>
       <div className="modal-wrapper" onClick={closeModal}></div>
       <div className="modal-container">
-        <h2>Stay Tuned </h2>
         <div>
 
           {compinfo}
         </div>
         {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo autem amet voluptate numquam, accusantium voluptas ipsa obcaecati, odit ratione corrupti ea, similique repudiandae. Laborum deleniti sequi consequuntur ullam maiores odio?</p> */}
-        <button className="p-2 rounded-md bg-green-800 hover:bg-green-600 text-white" onClick={closeModal}>Accept</button>
+        <button className="px-4 py-2 rounded-md bg-green-800 hover:bg-green-600 text-white" onClick={closeModal}>OK</button>
       </div>
     </>
   )
