@@ -1,7 +1,7 @@
 import React from "react";
 import "./Orders.css";
 import Modal from "../Modal";
-import EditInventoryManager from "../forms/EditInventoryManager";
+import EditFinanceManager from "../forms/EditFinanceManager";
 import ViewSingleRole from "../viewsingle/ViewSingleRole";
 
 const info = [
@@ -47,14 +47,14 @@ const obj={
   state: 'Mississippi'
 }
 
-const InventoryDetails = () => {
+const FinanceDetails = () => {
   return (
     <div className="queue-page border-2 rounded-md bg-tailtertiary m-0">
 
       <div className="orders-container">
         <div className="flex pl-3 py-3 justify-between pr-20 font-poppins font-bold text-teal-200 bg-black ">
           <h2>MANAGER ID</h2>
-          <h2>INVENTORY MANAGER NAME</h2>
+          <h2>FINANCE MANAGER NAME</h2>
           <h2>OPTIONS</h2>
         </div>
         {info.map((e) => (
@@ -62,8 +62,8 @@ const InventoryDetails = () => {
             <h2>Manager #{e.id}</h2>
             <p>{e.Name}</p>
             <div className="btn flex m-0 p-0">
-              <Modal btnname="DETAILS" compinfo={<ViewSingleRole obj={obj} role="Inventory Manager"/>}/>
-              <Modal btnname="EDIT" compinfo={<EditInventoryManager />} />
+              <Modal btnname="DETAILS" compinfo={<ViewSingleRole obj={obj} role="Finance Manager"/>}/>
+              <Modal btnname="EDIT" compinfo={<EditFinanceManager />} />
               <Modal btnname="DELETE" compinfo={<><h2 className="text-red-600 text-xl font-bold font-poppins">Are you sure you want to delete this Inventory Manager??</h2></>} />
             </div>
           </div>
@@ -73,4 +73,4 @@ const InventoryDetails = () => {
   );
 };
 
-export default InventoryDetails;
+export default FinanceDetails;

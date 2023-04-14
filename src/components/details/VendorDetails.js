@@ -2,7 +2,7 @@ import React from "react";
 import "./Orders.css";
 import Modal from "../Modal";
 import EditVendor from "../forms/EditVendor";
-import ViewSingleVendor from "../viewsingle/ViewSingleVendor";
+import ViewSingleRole from "../viewsingle/ViewSingleRole";
 
 const info = [
     {
@@ -43,6 +43,17 @@ const info = [
 
 ];
 
+const obj={
+    firstname: 'Rohan',
+    lastname: 'Jadhav',
+    email: 'rohan@gmail.com',
+    contact: '11111111111',
+    agentimage: 'https://akm-img-a-in.tosshub.com/businesstoday/images/story/202212/rohit_sharma-sixteen_nine.png?size=948:533',
+    city: 'georgia',
+    address: 'Cecilia Chapman 711-2880 Nulla St.Mankato Mississippi 96522(257) 563-7401',
+    state: 'Mississippi'
+  }
+
 
 
 const VenodrDetails = () => {
@@ -64,7 +75,7 @@ const VenodrDetails = () => {
                             <h2>Employee #{e.id}</h2>
                             <p>{e.Name}</p>
                             <div className="btn flex m-0 p-0">
-                                <Modal btnname="DETAILS" compinfo={<ViewSingleVendor />} />
+                                <Modal btnname="DETAILS" compinfo={<ViewSingleRole obj={obj} role="Vendor"/>} />
                                 <Modal btnname="EDIT" compinfo={<EditVendor />} />
                                 <Modal btnname="DELETE" compinfo={<><h2 className="text-red-600 text-xl font-bold font-poppins">Are you sure you want to delete this Delivery Agent??</h2></>} />
                             </div>

@@ -415,6 +415,16 @@ const SideBar = ({ children }) => {
                 routename="View Vendors"
                 icon={<VscPreview />}
               />
+              <MyNavitem
+                path="/dashboard/viewfinancemanagers"
+                routename="View Finance Managers"
+                icon={<VscPreview />}
+              />
+              <MyNavitem
+                path="/dashboard/viewcustomers"
+                routename="View Customers"
+                icon={<VscPreview />}
+              />
             </section>
           </motion.div>
 

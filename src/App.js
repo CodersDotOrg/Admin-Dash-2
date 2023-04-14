@@ -30,6 +30,8 @@ import AddFinanceManager from "./components/forms/AddFinanceManager";
 import EditFinanceManager from "./components/forms/EditFinanceManager";
 import AddCustomer from "./components/forms/AddCustomer";
 import EditCustomer from "./components/forms/EditCustomer";
+import FinancePage from "./pages/FinancePage";
+import CustomerPage from "./pages/CustomerPage";
 
 
 Modal.setAppElement('#root');
@@ -78,6 +80,8 @@ function App() {
             <Route exact path="editvendor" element={<EditVendor />} />
             <Route exact path="adduom" element={<AddUom />} />
             <Route exact path="edituom" element={<EditUom />} />
+            <Route exact path="viewfinancemanagers" element={<FinancePage/>}/>
+            <Route exact path="viewcustomers" element={<CustomerPage/>}/>
           </Route>
 
 

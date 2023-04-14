@@ -22,7 +22,7 @@ const MyModal = ({ closeModal, compinfo }) => {
           {compinfo}
         </div>
         {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo autem amet voluptate numquam, accusantium voluptas ipsa obcaecati, odit ratione corrupti ea, similique repudiandae. Laborum deleniti sequi consequuntur ullam maiores odio?</p> */}
-        <button className="px-4 py-2 rounded-md bg-green-800 hover:bg-green-600 text-white" onClick={closeModal}>OK</button>
+        <button className="px-4 py-2 rounded-md bg-green-600 hover:bg-green-800 text-white" onClick={closeModal}>OK</button>
       </div>
     </>
   )
