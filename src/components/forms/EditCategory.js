@@ -17,15 +17,18 @@ export default function EditCategory() {
 
     
 
-    const [catobj, setcatobj] = useState({ category: '',color:'',subcatallowed:0 });
+    const [catobj, setcatobj] = useState({ category: '',newcategory:'',color:'',subcatallowed:0 });
     const handleSubmit = (e) => {
         e.preventDefault();
+        if(catobj.category==='' || catobj.newcategory==='' || catobj.color==='' || catobj.subcatallowed===0){
+            alert('Please fill all the fields');
+        }
         console.log(catobj);
     }
 
     const onDiscard=(e)=>{
         e.preventDefault();
-        setcatobj({ category: '',color:'',subcatallowed:0 });
+        setcatobj({ category: '',newcategory:'',color:'',subcatallowed:0 });
     }
 
     const onChange = (e) => {
@@ -59,13 +62,13 @@ export default function EditCategory() {
                                 </div>
                                 <div className='flex flex-col py-2'>
                                         <label>Enter Updated Category : </label>
-                                        <input value={catobj.category}  required className='p-2 resize-x border mt-2 rounded-md' type="text" name='category' onChange={onChange} placeholder='Enter Category' />
+                                        <input required value={catobj.newcategory} className='p-2 resize-x border mt-2 rounded-md' type="text" name='newcategory' onChange={onChange} placeholder='Enter Category' />
                                 </div>
                                 <div className='flex flex-col py-2'>
 
                                         <label>Select Header Color : </label>
 
-                                        <input value={catobj.color} required className='w-full h-8 p-2 resize-x border mt-2 rounded-md' type="color" name='color' onChange={onChange} placeholder='Enter Category' />
+                                        <input required value={catobj.color} className='w-full h-8 p-2 resize-x border mt-2 rounded-md' type="color" name='color' onChange={onChange} placeholder='Enter Category' />
                                 </div>
                                 <div className='flex py-2'>
                                     <div className='flex-col justify-center'>
@@ -73,7 +76,7 @@ export default function EditCategory() {
                                         <label className='py-3 font-bold'>Subcategory Allowed : yes no toggle button</label>
                                     </div>
                                     <div className='flex-col justify-center'>
-                                        <input value={catobj.subcatallowed} type="" name="subcatallowed" id="subcatallowed" />
+                                        <input required value={catobj.subcatallowed} type="checkbox" name="subcatallowed" id="subcatallowed" />
                                     </div>
                                 </div>
                                 <div className='flex mx-auto'>

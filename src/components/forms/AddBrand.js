@@ -22,6 +22,9 @@ export default function AddBrand() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        if (obj.productname === '' || obj.brand === '') {
+            alert('Please fill all the fields');
+        }
         console.log(obj);
     }
 

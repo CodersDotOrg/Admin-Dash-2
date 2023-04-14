@@ -23,6 +23,9 @@ export default function AddVendor() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        if (obj.firstname === '' || obj.lastname === '' || obj.email === '' || obj.contact === '' || obj.vendorimage === '' || obj.city === '' || obj.address === '' || obj.state === '') {
+            alert('Please fill all the fields');
+        }
         console.log(obj);
     }
 

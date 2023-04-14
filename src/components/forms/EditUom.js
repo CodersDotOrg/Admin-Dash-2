@@ -16,19 +16,22 @@ export default function EditUom() {
     ])
 
     const [obj, setobj] = useState({
-        uomold: '',
+        updateduom: '',
         uom: ''
     })
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        if (obj.updateduom === '' || obj.uom === '') {
+            alert('Please fill all the fields');
+        }
         console.log(obj);
     }
 
     const onDiscard = (e) => {
         e.preventDefault();
         setobj({
-            uomold: '',
+            updateduom: '',
             uom: ''
         });
     }
@@ -53,7 +56,7 @@ export default function EditUom() {
 
                                 <div className='flex flex-col py-2'>
                                     <label>Select a UOM</label>
-                                    <select required name="uom" value={obj.uomold} onChange={onChange} className='border px-2 py-2 mt-1 w-full rounded-md'>
+                                    <select required name="uom" value={obj.uom} onChange={onChange} className='border px-2 py-2 mt-1 w-full rounded-md'>
                                         {uomarray.map((cat) => (
                                             <option key={cat.id} value={cat.uom}>{cat.uom}</option>
                                         ))}
@@ -61,7 +64,7 @@ export default function EditUom() {
                                 </div>
                                 <div className='flex flex-col py-2'>
                                     <label>Enter Updated Unit Of Measurement</label>
-                                    <input value={obj.uom} required className='w-full py-1 border mt-2 rounded-md' type="text" name='uom' onChange={onChange} placeholder='Enter Unit Of Measurement' />
+                                    <input value={obj.updateduom} required className='w-full py-1 border mt-2 rounded-md' type="text" name='updateduom' onChange={onChange} placeholder='Enter Unit Of Measurement' />
 
                                 </div>
                                 <div className='flex mx-auto mt-2'>

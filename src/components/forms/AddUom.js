@@ -15,6 +15,9 @@ export default function AddUom() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        if (obj.uom === '') {
+            alert('Please fill all the fields');
+        }
         console.log(obj);
     }
 

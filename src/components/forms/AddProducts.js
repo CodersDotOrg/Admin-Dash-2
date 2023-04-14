@@ -56,6 +56,9 @@ export default function AddProducts() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        if (obj.productname === '' || obj.productprice === 0 || obj.productimage === null || obj.category === '' || obj.subcategory === '' || obj.brand === '' || obj.uom === 0 || obj.offer === '') {
+            alert('Please fill all the fields');
+        }
         console.log(obj);
     }
 

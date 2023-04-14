@@ -24,6 +24,9 @@ export default function AddSubcategory() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        if (obj.category === '' || obj.subcategory === '' || obj.color === '' || obj.productcatallowed === 0) {
+            alert('Please fill all the fields');
+        }
         console.log(obj);
     }
 

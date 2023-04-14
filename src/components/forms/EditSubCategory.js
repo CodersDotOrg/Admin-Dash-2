@@ -25,18 +25,22 @@ export default function EditSubCategory() {
     const [obj, setobj] = useState({
         category: '',
         subcategory: '',
+        updatedsubcategory:'',
         color:'',
         productcatallowed:0
     })
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        if (obj.category === '' || obj.subcategory === '' || obj.updatedsubcategory === '' || obj.color === '' || obj.productcatallowed === 0) {
+            alert('Please fill all the fields');
+        }
         console.log(obj);
     }
 
     const onDiscard=(e)=>{
         e.preventDefault();
-        setobj({ category: '',subcategory:'',color:'',productcatallowed:0 });
+        setobj({ category: '',updatedsubcategory:'',subcategory:'',color:'',productcatallowed:0 });
     }
 
     const onChange = (e) => {
@@ -75,7 +79,7 @@ export default function EditSubCategory() {
 
                                 <div className='flex flex-col py-2'>
                                     <label>Enter Updated Sub Category</label>
-                                    <input required className='border p-2 mt-1 rounded-md' value={obj.subcategory} type="text" name='subcategory' placeholder='Enter Sub Category' onChange={onChange} />
+                                    <input required className='border p-2 mt-1 rounded-md' value={obj.updatedsubcategory} type="text" name='updatedsubcategory' placeholder='Enter Sub Category' onChange={onChange} />
                                 </div>
                                 <div className='flex flex-col py-2'>
                                     <label>Select Header Color</label>

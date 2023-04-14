@@ -24,11 +24,15 @@ export default function EditBrand() {
 
     const [obj, setobj] = useState({
         productname: '',
+        newproductname: '',
         brand: ''
     })
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        if (obj.productname === '' || obj.newproductname === '' || obj.brand === '') {
+            alert('Please fill all the fields');
+        }
         console.log(obj);
     }
 
@@ -36,6 +40,7 @@ export default function EditBrand() {
         e.preventDefault();
         setobj({
             productname: '',
+            newproductname: '',
             brand: ''
         });
     }
@@ -66,7 +71,7 @@ export default function EditBrand() {
                                 </div>
                                 <div className='flex flex-col py-2'>
                                     <label>Enter Updated Brand Name</label>
-                                    <input required className='border p-2 mt-1 rounded-md' type="text" name='productname' value={obj.productname} placeholder='Enter Brand Name' onChange={onChange} />
+                                    <input required className='border p-2 mt-1 rounded-md' type="text" name='newproductname' value={obj.newproductname} placeholder='Enter Product Brand Name' onChange={onChange} />
                                 </div>
 
                                 <div className='flex flex-col py-2'>

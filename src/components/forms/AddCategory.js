@@ -13,6 +13,9 @@ export default function AddCategory() {
     const [catobj, setcatobj] = useState({ category: '', color: '',subcatallowed:0 });
     const handleSubmit = (e) => {
         e.preventDefault();
+        if(catobj.category==='' || catobj.color==='' || catobj.subcatallowed===0){
+            alert('Please fill all the fields');
+        }
         console.log(catobj);
     }
 
