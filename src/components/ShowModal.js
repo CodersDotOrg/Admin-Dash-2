@@ -17,7 +17,7 @@ const MyModal = ({ closeModal, compinfo }) => {
     <>
       <div className="modal-wrapper" onClick={closeModal}></div>
       <div className="modal-container">
-        <div>
+        <div className="p-4">
 
           {compinfo}
         </div>
